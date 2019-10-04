@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CheckableImageButton-->
+    <declare-styleable name="CheckableImageButton">
+        <attr name="isChecked" format="boolean" />
+        <attr name="checked_bg" format="reference" />
+        <attr name="normal_bg" format="reference" />
+        <attr name="canrepeat" format="boolean" />
+        <attr name="canTouchable" format="boolean" />
+    </declare-styleable>
+
+    <!--圆形头像-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <!--下载APP后台更新进度条-->
+    <declare-styleable name="UpdateAppNumberProgressBar">
+        <attr name="custom_progress_current" format="integer" />
+        <attr name="custom_progress_max" format="integer" />
+
+        <attr name="custom_progress_unreached_color" format="color" />
+        <attr name="custom_progress_reached_color" format="color" />
+
+        <attr name="custom_progress_reached_bar_height" format="dimension" />
+        <attr name="custom_progress_unreached_bar_height" format="dimension" />
+
+        <attr name="custom_progress_text_size" format="dimension" />
+        <attr name="custom_progress_text_color" format="color" />
+
+        <attr name="custom_progress_text_offset" format="dimension" />
+
+        <attr name="custom_progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

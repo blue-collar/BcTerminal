@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:aandroid="http://schemas.android.com/tools"
+    android:background="@color/light_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/top_bar">
+
+        <ImageView
+            android:id="@+id/iv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/ic_home_temperature"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tv_today_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_temperature"
+            android:gravity="center_vertical"
+            android:text="32°C"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_disaster_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="警情列表"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+
+        <FrameLayout
+            android:id="@+id/toolbar_disaster_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_10"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disaster_msg_normal" />
+
+            <TextView
+                android:id="@+id/unread_toolbar_disaster_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/unread_chat_count_bg"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+        </FrameLayout>
+
+    </RelativeLayout>
+    <!--首页-->
+    <LinearLayout
+        android:id="@+id/ll_index_page_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/top_bar"
+            android:orientation="horizontal">
+
+            <!--未结案-->
+            <LinearLayout
+                android:id="@+id/ll_unclosed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_unclosed_num"
+                    style="@style/Index_Disaster_Num"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/Index_Disaster_Label"
+                    android:text="@string/text_index_page_unclosed" />
+
+            </LinearLayout>
+
+            <!--已结案-->
+            <LinearLayout
+                android:id="@+id/ll_closed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_closed_num"
+                    style="@style/Index_Disaster_Num"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/Index_Disaster_Label"
+                    android:text="@string/text_index_page_closed" />
+
+            </LinearLayout>
+
+            <!--火灾扑救-->
+            <LinearLayout
+                android:id="@+id/ll_fired"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_fired_num"
+                    style="@style/Index_Disaster_Num"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/Index_Disaster_Label"
+                    android:text="@string/text_index_page_fire" />
+
+            </LinearLayout>
+
+            <!--抢险救援-->
+            <LinearLayout
+                android:id="@+id/ll_rescued"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_fire_rescued_num"
+                    style="@style/Index_Disaster_Num"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/Index_Disaster_Label"
+                    android:text="@string/text_index_page_fire_rescue" />
+
+            </LinearLayout>
+
+            <!--社会救援-->
+            <LinearLayout
+                android:id="@+id/ll_social"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_social_rescued_num"
+                    style="@style/Index_Disaster_Num"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/Index_Disaster_Label"
+                    android:text="@string/text_index_page_social_rescue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--搜索-->
+        <LinearLayout
+            android:id="@+id/ll_main_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <com.telewave.battlecommand.view.ClearEditText
+                android:id="@+id/edit_top_key_word"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_10"
+                android:layout_weight="3"
+                android:background="@drawable/shape_corner_et_bg"
+                android:drawableLeft="@mipmap/search_gray"
+                android:textCursorDrawable="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_key_word"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/dp_5"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corner_btn_bg"
+                android:text="@string/btn_select_more"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--查询更多页面-->
+    <LinearLayout
+        android:id="@+id/ll_index_page_search_more_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--起止时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="0.8"
+                android:gravity="left|center"
+                android:text="@string/label_start_and_end_time"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/et_start_time"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corner_et_bg"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="开始时间" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="至:"
+                android:textSize="@dimen/sp_18" />
+
+            <EditText
+                android:id="@+id/et_end_time"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corner_et_bg"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="结束时间" />
+        </LinearLayout>
+
+        <!--报警分类-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="0.8"
+                android:gravity="left|center"
+                android:text="@string/label_alarm_type"
+                android:textSize="@dimen/sp_16" />
+
+            <Spinner
+                android:id="@+id/sp_alarm_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"
+                android:layout_marginStart="@dimen/dp_3"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="35dp" />
+
+        </LinearLayout>
+
+        <!--警情状态-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="0.8"
+                android:gravity="left|center"
+                android:text="@string/label_alarm_state"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rg_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_all"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                        android:background="@drawable/scope_radiobutton_background_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="@string/label_alarm_state_all" />
+
+                    <RadioButton
+                        android:id="@+id/rb_closed"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                        android:background="@drawable/scope_radiobutton_background_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="@string/text_index_page_closed" />
+
+                    <RadioButton
+                        android:id="@+id/rb_unclosed"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                        android:background="@drawable/scope_radiobutton_background_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="@string/text_index_page_unclosed" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--关键字-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8"
+                android:text="@string/label_key_word"
+                android:textSize="@dimen/toolbar_right_text_size"
+                aandroid:gravity="left|center" />
+
+            <com.telewave.battlecommand.view.ClearEditText
+                android:id="@+id/et_key_word_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_10"
+                android:layout_weight="1.6"
+                android:background="@drawable/shape_corner_et_bg"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_key_word"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/dp_5"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="0.4"
+                android:background="@drawable/shape_corner_et_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/search_gray"
+                    android:scaleType="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_close_up"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@drawable/shape_corner_et_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:background="@mipmap/close_up" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="收起"
+                    android:textSize="12sp" />-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--下拉刷新list-->
+
+    <com.yuan.refreshlayout.RefreshLayout
+        android:id="@+id/disaster_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_disaster_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </com.yuan.refreshlayout.RefreshLayout>
+
+
+</LinearLayout>

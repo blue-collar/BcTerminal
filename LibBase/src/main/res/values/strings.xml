@@ -1,0 +1,7 @@
+<resources>
+    <string name="permission_denied">没有权限</string>
+
+
+    <string name="twe_input_digits_only_english_and_num">0123456789qwertyuiopasdfghjklzxcvbnm.</string>
+
+</resources>

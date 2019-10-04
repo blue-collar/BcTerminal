@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tab_text_checked">#ea1301</color>
+    <color name="tab_text_unchecked">#757575</color>
+    <color name="microstation_bg">#D4D5D5</color>
+    <color name="my_center_bg">#f5f5f5</color>
+
+    <color name="divider_line_bg">#f5f5f5</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="divide_line">#999</color>
+
+    <color name="white_gray">#EAE8E9</color>
+    <color name="divider_list">#cccccc</color>
+    <color name="color_gray6">#666666</color>
+    <color name="color_gray3">#333333</color>
+    <color name="color_gray9">#999999</color>
+    <color name="darkGray">#999999</color>
+    <color name="gray_line">#F2F4F8</color>
+
+    <!--multiline_radiobutton-->
+    <color name="btn_background_unpressed">#ECF1F4</color>
+    <color name="btn_text_color_unpressed">#AFB1AF</color>
+    <color name="btn_text_color_pressed">#03A9F4</color>
+    <color name="subtitle_text_color">#101010</color>
+    <color name="parting_line_alarm_time">#40AFB1AF</color>
+    <color name="duty_table_item_checked">#ADBBE0</color>
+    <color name="login_edit_text_color">#101010</color>
+    <color name="login_edit_hint_text_color">#b9b8b9</color>
+    <color name="login_auto_login_text_color">#b9b8b9</color>
+    <color name="login_forget_password_text_color">#D41616</color>
+    <color name="login_register_text_color">#D41616</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#D2D2D2</color>
+
+    <color name="red">#D41616</color>
+    <color name="color_f6">#f6f6f6</color>
+
+
+    <color name="login_edit_bg_color">#33000000</color>
+    <color name="footer_text_color">#ff7f7f7f</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_202020">#202020</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_707070">#707070</color>
+    <color name="color_757575">#757575</color>
+    <color name="color_55D03C">#55D03C</color>
+    <color name="color_777777">#777777</color>
+
+    <!--以下是腾讯云音视频要使用颜色值-->
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorComBg">#333333</color>
+    <color name="colorAudioBg">#777777</color>
+    <color name="colorBtn">#016EFF</color>
+    <color name="hlfTransparent">#30000000</color>
+    <color name="line_btn">#BBBBBB</color>
+
+</resources>

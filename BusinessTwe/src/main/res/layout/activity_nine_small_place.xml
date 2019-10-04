@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.telewave.battlecommand.activity.NineSmallPlaceActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar">
+
+        <include layout="@layout/page_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="九小场所"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <!--搜索-->
+    <LinearLayout
+        android:id="@+id/ll_main_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <com.telewave.battlecommand.view.ClearEditText
+            android:id="@+id/edit_nine_place_name_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_10"
+            android:layout_weight="3"
+            android:background="@drawable/shape_corner_et_bg"
+            android:drawableLeft="@mipmap/search_gray"
+            android:textCursorDrawable="@null"
+            android:gravity="left|center_vertical"
+            android:hint="@string/hint_nine_place_name"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dp_5"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/btn_nine_place_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_btn_bg"
+            android:text="@string/hint_unit_search"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_nine_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

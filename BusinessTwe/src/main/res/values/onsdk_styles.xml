@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="NavCommonListItemTitleText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="NavCommonListItemTipsText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+</resources>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context="com.telewave.battlecommand.fragment.DisasterDetailFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="基础信息"
+            android:gravity="center" />
+
+        <!--灾害地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="灾害地址" />
+
+            <TextView
+                android:id="@+id/disaster_detail_address"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--接警时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="接警时间" />
+
+            <TextView
+                android:id="@+id/disaster_detail_alarm_time"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--主管中队-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="主管中队" />
+
+            <TextView
+                android:id="@+id/disaster_detail_zd_name"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--主管支队-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="主管支队" />
+
+            <TextView
+                android:id="@+id/disaster_detail_upper_organ_name"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--报警人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="    报警人" />
+
+            <TextView
+                android:id="@+id/disaster_detail_edit_alarm_person"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--联系电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="联系电话" />
+
+            <TextView
+                android:id="@+id/disaster_detail__phone_number"
+                style="@style/Fire_Summary_Content"
+                android:autoLink="all" />
+        </LinearLayout>
+        <!--到场时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="到场时间" />
+
+            <TextView
+                android:id="@+id/disaster_detail_present_time"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--报警分类-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="报警分类" />
+
+            <TextView
+                android:id="@+id/disaster_detail_alarm_sort"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--灾害判定-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="灾害判定" />
+
+            <TextView
+                android:id="@+id/disaster_detail_charge"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--灾害等级-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="灾害等级" />
+
+            <TextView
+                android:id="@+id/disaster_detail_range"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--事件编号-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="事件编号" />
+
+            <TextView
+                android:id="@+id/disaster_detail_event_numbering"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--灾害描述-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="灾害描述" />
+
+            <TextView
+                android:id="@+id/disaster_detail_description"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="补充信息"
+            android:gravity="center" />
+        <!--燃烧物质-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="燃烧物质" />
+
+            <TextView
+                android:id="@+id/disaster_detail_bust_mass"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--警情状态-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="警情状态" />
+
+            <TextView
+                android:id="@+id/disaster_detail_alarm_state"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--燃烧面积-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="燃烧面积（m²）" />
+
+            <TextView
+                android:id="@+id/disaster_detail_fired_area"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--受伤人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="受伤人数" />
+
+            <TextView
+                android:id="@+id/disaster_detail_injured_people"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--被困人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="被困人数" />
+
+            <TextView
+                android:id="@+id/disaster_detail_evacuated_people"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--死亡人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="死亡人数" />
+
+            <TextView
+                android:id="@+id/disaster_detail_dead_people"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--烟雾警报-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="烟雾警报" />
+
+            <TextView
+                android:id="@+id/disaster_detail_smog"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+        <!--重大警情-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="重大警情" />
+
+            <TextView
+                android:id="@+id/disaster_detail_important_alarm"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="现场图片"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/disaster_detail_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="现场视频"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/disaster_detail_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20" />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

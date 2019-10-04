@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">消防终端-指挥</string>
+    <string name="permission_hint_msg">请授予设备权限以获取设备信息、摄像头、音频以及位置信息等权限</string>
+    <string name="permission_float_win_msg">悬浮窗权限未开启</string>
+</resources>

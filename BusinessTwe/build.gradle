@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildtools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        /**
+         * ARouter 路由配置
+         */
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    greendao {
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':LibNet')
+    implementation project(path: ':LibStorage')
+    implementation project(path: ':LibRouter')
+    implementation project(path: ':LibIM')
+    implementation project(path: ':LibMap')
+    implementation project(path: ':LibPush')
+    implementation project(path: ':LibBase')
+
+    //扫描二维码组件
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+
+    api(name: 'onsdk_all', ext: 'aar')
+    api(name: 'NaviTts', ext: 'aar')
+    api(name: 'refreshlayout', ext: 'aar')
+
+    //mqtt依赖 - 消息推送
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    // HUAWEI push sdk
+    implementation ('com.huawei.android.hms:push:2.6.3.301')
+    // MEIZU push sdk
+    implementation 'com.meizu.flyme.internet:push-internal:3.7.0@aar'
+
+    //ARouter 路由配置
+    annotationProcessor(rootProject.ext.dependencies.arouter_compiler) {
+        exclude group: 'com.android.support'
+    }
+}

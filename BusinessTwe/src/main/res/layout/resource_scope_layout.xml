@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="资源圈范围（直径）"
+        android:textSize="18sp" />
+
+    <com.telewave.battlecommand.view.MultiLineRadioGroup
+        android:id="@+id/resource_scope_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/diameter_type_one_btn"
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:checked="true"
+                android:button="@null"
+                android:text="500米"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/diameter_type_two_btn"
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="1000米"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/diameter_type_three_btn"
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="1500米"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/diameter_type_four_btn"
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="2000米"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/diameter_type_five_btn"
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="5000米"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:textColor="@drawable/multiline_radiobutton_text_color_selector"
+                android:background="@drawable/scope_radiobutton_background_selector"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:button="@null"
+                android:text="5000米"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </com.telewave.battlecommand.view.MultiLineRadioGroup>
+
+</LinearLayout>

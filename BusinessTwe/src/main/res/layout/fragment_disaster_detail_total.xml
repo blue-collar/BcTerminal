@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context="com.telewave.battlecommand.fragment.DisasterDetailFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_disaster_detail" />
+
+    <ImageView
+        android:id="@+id/iv_disaster_detail_chat"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@mipmap/disaster_detail_chat"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/dp_120"
+        android:layout_marginRight="@dimen/dp_20" />
+
+    <TextView
+        android:id="@+id/tv_disaster_detail_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="编辑详情"
+        android:textColor="@color/red" />
+
+
+</FrameLayout>

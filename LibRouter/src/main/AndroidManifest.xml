@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.telewave.lib.router">
+
+    <application>
+        <activity
+            android:name="com.telewave.lib.router.interceptor.InterceptorActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleTask"
+            android:theme="@style/routerTransparentActivityStyle" />
+    </application>
+</manifest>

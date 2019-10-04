@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.telewave.battlecommand.fragment.DisasterDetailFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_fire_document_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvTrace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_fire_document_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_20"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_corner_btn_bg"
+            android:text="添  加"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll_view_fire_document_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_fire_document_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_3"
+            android:visibility="visible">
+
+            <!--反馈人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="#CEE5F7"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="反馈人"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_response_person"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_corner_et_bg"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:hint="请输入反馈人"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--反馈时间-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="#CEE5F7"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="反馈时间"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_response_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:background="@drawable/shape_corner_et_bg"
+                    android:hint="请输入反馈时间"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--反馈内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/dp_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="#CEE5F7"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="反馈内容"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_response_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:background="@drawable/shape_corner_et_bg"
+                    android:gravity="top"
+                    android:hint="请输入反馈内容"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--阶段描述-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="#CEE5F7"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="阶段描述"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_response_description"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:hint="描述信息"
+                    android:gravity="left|center"
+                    android:background="@drawable/shape_corner_et_bg"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <!--添加图片-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/pic_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_fire_document_back"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_margin="@dimen/sp_20"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:background="@drawable/shape_corner_btn_bg"
+                    android:text="返 回"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_fire_document_upload"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_margin="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:background="@drawable/shape_corner_btn_bg"
+                    android:text="上 传"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

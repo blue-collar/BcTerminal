@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/common_edit_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/common_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/selector_text_menu" />
+
+        <EditText
+            android:id="@+id/common_edit_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/common_edit_name"
+            android:textSize="14sp"
+            android:textColor="@color/selector_text_menu"
+            android:singleLine="true"
+            android:layout_marginLeft="20dp"
+            android:paddingRight="40dp"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/common_edit_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twe_ic_delete"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:layout_alignRight="@id/common_edit_input"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

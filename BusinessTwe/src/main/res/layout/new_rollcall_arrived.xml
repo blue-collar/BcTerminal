@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/disaster_detail_new_zq_arrived_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/notify_popwindow_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/pupwindow_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="@dimen/tittle_paddingbuttom"
+        android:paddingTop="@dimen/tittle_paddingtop"
+        android:text="点名"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rollcall_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="@dimen/tittle_paddingbuttom"
+            android:paddingTop="@dimen/tittle_paddingtop"
+            android:text="2018-12-03 11:23:45"
+            android:textColor="@color/darkGray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/rollcall_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:paddingBottom="@dimen/tittle_paddingbuttom"
+            android:paddingTop="@dimen/tittle_paddingtop"
+            android:text="来源:西藏自治区公安消防总队"
+            android:textColor="@color/darkGray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rollcall_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:minEms="5"
+        android:text="点名开始，请及时应答"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/btn_checked_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fire_btn_bg_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="去应答"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

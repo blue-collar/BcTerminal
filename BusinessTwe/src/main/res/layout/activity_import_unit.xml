@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar">
+
+        <include layout="@layout/page_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="重点单位"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <!--搜索-->
+    <LinearLayout
+        android:id="@+id/ll_main_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <com.telewave.battlecommand.view.ClearEditText
+            android:id="@+id/edit_unit_name_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_10"
+            android:layout_weight="3"
+            android:background="@drawable/shape_corner_et_bg"
+            android:drawableLeft="@mipmap/search_gray"
+            android:textCursorDrawable="@null"
+            android:gravity="left|center_vertical"
+            android:hint="@string/hint_unit_name"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dp_5"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/btn_unit_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_btn_bg"
+            android:text="@string/hint_unit_search"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--下拉刷新list-->
+
+    <com.yuan.refreshlayout.RefreshLayout
+        android:id="@+id/unit_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_unit_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.yuan.refreshlayout.RefreshLayout>
+
+    <!--<ListView
+        android:id="@+id/import_unit_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/listview_empty_view"
+        layout="@layout/item_common_empty"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/microstation_bg" />-->
+
+
+</LinearLayout>

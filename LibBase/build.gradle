@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildtools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.dependencies.support_v4
+    api rootProject.ext.dependencies.appcompat_v7
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.constraint_layout
+
+    api rootProject.ext.dependencies.recyclerview_v7
+    api rootProject.ext.dependencies.cardview_v7
+    api rootProject.ext.dependencies.gridlayout_v7
+    api rootProject.ext.dependencies.percent
+    api rootProject.ext.dependencies.support_design
+    api rootProject.ext.dependencies.support_core_utils
+    api rootProject.ext.dependencies.support_annotations
+
+    //NotchFit是Android端的刘海屏适配库，适配了Android O版本和P版本
+    api 'com.wcl.notchfit:notchfit:1.4'
+    //Gson库
+    api 'com.google.code.gson:gson:2.8.5'
+    //轮播库
+    api 'com.youth.banner:banner:1.4.10'
+    //gif动画view 新版本好像不起效果   1.2.2这个版本可以
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.2'
+    //树形View
+    api 'com.github.bmelnychuk:atv:1.2.+'
+    //PictureSelector图片选择器
+    api 'com.github.aliwh1203:PictureSelector:v1.4'
+    api 'com.contrarywind:Android-PickerView:4.1.8'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+    api 'com.github.zhangke3016:MultilevelTreeList:1.0.2'
+    //hello-chart统计图
+    api 'com.github.aliwh1203:HelloChartNew:v1.1'
+    //顶部和底部显示自定义布局的Snackbar[已不再维护了]
+    api 'com.sun.easysnackbar:easysnackbar:1.0.1'
+    //ImageZoom图片缩放控件 - 手势缩放图片
+    api 'it.sephiroth.android.library.imagezoom:library:1.0.4'
+}

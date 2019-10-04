@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="status_bar_place_holder" type="id" />
+
+    <item name="twe_tool_bar" type="id" />
+    <item name="twe_toolbar_title" type="id" />
+    <item name="twe_toolbar_subtitle" type="id" />
+</resources>

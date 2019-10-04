@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/disaster_plot_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@mipmap/ic_home_fire"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/disaster_plot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title"
+        android:layout_gravity="center"
+        android:background="@drawable/disaster_plot_text_bg"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="火灾扑救"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+
+</LinearLayout>

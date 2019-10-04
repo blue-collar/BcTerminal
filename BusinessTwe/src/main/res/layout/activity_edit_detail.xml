@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:fitsSystemWindows="true"
+    tools:context="com.telewave.battlecommand.activity.EditDetailActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/top_bar">
+
+            <TextView
+                android:id="@+id/tv_today_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="警情编辑"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_edit_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_marginRight="60dp"
+                android:layout_toLeftOf="@id/tv_detail_edit_sure"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_edit_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--报警时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="报警时间"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_alarmed_time"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--报警人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="报警人"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_alarmed_person"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--联系电话-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="联系电话"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_phone"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--报警分类-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="报警分类"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_type"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+
+
+                <!--地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="地址"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_disaster_address"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <!--燃烧物-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="燃烧物"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_disaster_combustion"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+                <!--主管单位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="主管单位"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_charge_organ"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+                <!--烟雾情况-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="烟雾情况"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_edit_smog"
+                        style="@style/Fire_Summary_Content"
+                        android:text="" />
+
+                </LinearLayout>
+                <!--灾害等级-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="灾害等级"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_disaster_range"
+                        style="@style/Fire_Summary_Content" />
+
+                </LinearLayout>
+
+
+                <!--警情状态,选择框-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Fire_Summary_Label"
+                        android:text="警情状态" />
+
+                    <TextView
+                        android:id="@+id/tv_disaster_state"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+
+
+                <!--燃烧面积-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="燃烧面积" />
+
+                    <EditText
+                        android:id="@+id/tv_disaster_detail_bust_area"
+                        style="@style/Detail_EditText_Content" />
+                </LinearLayout>
+                <!--被困人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="被困人数" />
+
+                    <EditText
+                        android:id="@+id/et_disaster_detail_trapped_people"
+                        style="@style/Detail_EditText_Content" />
+                </LinearLayout>
+
+
+                <!--群众受伤人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="群众受伤人数：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_trapped_people"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--疏散人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="疏散人数：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_evacuated_people"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--水消耗-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="水消耗：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_water_cost"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--直接财产损失（万元）-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="直接财产损失（万元）：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_property_loss"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--消耗空呼器数量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="消耗空呼器数量：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_breath_number"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--燃烧场所-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="燃烧场所：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_fire_place"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--接收命令时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="接收命令时间：" />
+
+                    <TextView
+                        android:id="@+id/et_summary_accepted_order_time"
+                        style="@style/Detail_EditText_Content"
+                        android:hint="请选择时间" />
+
+                </LinearLayout>
+                <!--到达现场时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="到达现场时间：" />
+
+                    <TextView
+                        android:id="@+id/et_summary_arrived_present_time"
+                        style="@style/Detail_EditText_Content"
+                        android:hint="请选择时间" />
+
+                </LinearLayout>
+                <!--到场出水时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="到场出水时间：" />
+
+                    <TextView
+                        android:id="@+id/et_summary_put_water_time"
+                        style="@style/Detail_EditText_Content"
+                        android:hint="请选择时间" />
+
+                </LinearLayout>
+                <!--扑火时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="扑火时间：" />
+
+                    <TextView
+                        android:id="@+id/et_summary_put_fire_time"
+                        style="@style/Detail_EditText_Content"
+                        android:hint="请选择时间" />
+
+                </LinearLayout>
+                <!--群众死亡人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="群众死亡人数：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_death_people"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--解救人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="解救人数：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_rescued_people"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--泡沫消耗-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="泡沫消耗：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_bubble_cost"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--保护财产（万元）-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="保护财产（万元）：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_protected_property_sum"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+                <!--火灾地域分类-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="火灾地域分类：" />
+
+                    <EditText
+                        android:id="@+id/et_summary_fire_district"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+
+
+                <!--灾情描述-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Detail_TextView_Label"
+                        android:text="灾情描述" />
+
+                    <EditText
+                        android:id="@+id/et_disaster_description"
+                        style="@style/Detail_EditText_Content" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="(注：蓝色为可编辑项)"
+                        android:textColor="#5391FF" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

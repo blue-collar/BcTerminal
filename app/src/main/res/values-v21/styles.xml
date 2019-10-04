@@ -1,0 +1,11 @@
+<resources>
+    <!-- 启动页样式 -->
+    <style name="Theme.twe.Splash">
+        <item name="android:windowFullscreen">true</item>
+        <!--适配华为手机虚拟按键问题-->
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowBackground">@mipmap/splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

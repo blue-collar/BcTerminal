@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#ff000000</color>
+
+    <color name="transparent">#00000000</color>
+
+    <!--标题和状态栏颜色-->
+    <color name="title_bar">@color/white</color>
+    <!--界面默认背景色-->
+    <color name="default_bg">#efefe3</color>
+
+    <color name="colorPrimary">#4d73f4</color>
+    <color name="colorPrimaryAlphaBB">#ee4d73f4</color>
+    <color name="colorPrimaryAlpha88">#884d73f4</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#4d73f4</color>
+
+    <!--分割线-->
+    <color name="divider">#d5d5d5</color>
+
+    <color name="transparent_half">#30000000</color>
+    <color name="toolbar_title_color">#000000</color>
+    <color name="toolbar_right_text_color">#4d73f4</color>
+    <color name="serch_driver_view_text_color">#222222</color>
+    <!--基础颜色-->
+    <color name="default_press_color">#F2F2F2</color>
+
+    <color name="twe_primary">#27a5f9</color>
+
+    <!-- #7b7b7b : 灰色-->
+    <color name="color_gray_7b7b7b">#7b7b7b</color>
+
+    <!-- 黑色分割线 -->
+    <color name="color_black_dcdcdc">#dcdcdc</color>
+
+    <!-- #e8e8e8 : 灰色-->
+    <color name="color_gray_e8e8e8">#e8e8e8</color>
+
+
+</resources>

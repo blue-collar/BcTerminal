@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_chemical_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/list_item_selector"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/chemical_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:paddingLeft="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="腾讯大厦"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

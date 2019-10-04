@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context="com.telewave.battlecommand.fragment.DisasterDetailFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="vertical">
+
+        <!--群众受伤人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="群众受伤人数："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_trapped_people"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--疏散人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="疏散人数："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_evacuated_people"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--水消耗-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="水消耗："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_water_cost"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--直接财产损失（万元）-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="直接财产损失（万元）："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_property_loss"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--消耗空呼器数量-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消耗空呼器数量："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_breath_number"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--燃烧场所-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="燃烧场所："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_fire_place"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--接收命令时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="接收命令时间："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_accepted_order_time"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--到达现场时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="到达现场时间："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_arrived_present_time"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--到场出水时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="到场出水时间："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_put_water_time"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--扑火时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="扑火时间："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_put_fire_time"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--群众死亡人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="群众死亡人数："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_death_people"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--解救人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="解救人数："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_rescued_people"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--泡沫消耗-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="泡沫消耗："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_bubble_cost"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--保护财产（万元）-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="保护财产（万元）："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_protected_property_sum"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+        <!--火灾地域分类-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="火灾地域分类："
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_summary_fire_district"
+                style="@style/Fire_Summary_Content"
+                android:text="" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="更多类型"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/import_unit_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.telewave.battlecommand.view.CheckableImageButton
+                android:id="@+id/ck_import_unit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:canTouchable="true"
+                app:canrepeat="true"
+                app:checked_bg="@mipmap/import_unit_checked"
+                app:isChecked="false"
+                app:normal_bg="@mipmap/import_unit_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重点单位"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nine_small_place_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.telewave.battlecommand.view.CheckableImageButton
+                android:id="@+id/ck_nine_small_place"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:canTouchable="true"
+                app:canrepeat="true"
+                app:checked_bg="@mipmap/nine_small_place_checked"
+                app:isChecked="false"
+                app:normal_bg="@mipmap/nine_small_place_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="九小场所"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/high_build_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.telewave.battlecommand.view.CheckableImageButton
+                android:id="@+id/ck_high_build"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:canTouchable="true"
+                app:canrepeat="true"
+                app:checked_bg="@mipmap/high_build_checked"
+                app:isChecked="false"
+                app:normal_bg="@mipmap/high_build_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高层建筑"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logistic_unit_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.telewave.battlecommand.view.CheckableImageButton
+                android:id="@+id/ck_logistic_unit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:canTouchable="true"
+                app:canrepeat="true"
+                app:checked_bg="@mipmap/lianqin_unit_checked"
+                app:isChecked="false"
+                app:normal_bg="@mipmap/lianqin_unit_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联勤单位"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emergency_unit_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.telewave.battlecommand.view.CheckableImageButton
+                android:id="@+id/ck_emergency_unit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:canTouchable="true"
+                app:canrepeat="true"
+                app:checked_bg="@mipmap/emergency_unit_checked"
+                app:isChecked="false"
+                app:normal_bg="@mipmap/emergency_unit_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应急单位"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

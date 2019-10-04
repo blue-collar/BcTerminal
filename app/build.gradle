@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildtools
+
+    defaultConfig {
+        applicationId "com.telewave.battlecommand"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true //dex突破65535的限制
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
+
+        resConfigs "en", "de", "es"
+        flavorDimensions "versionCode"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    //配置签名
+    signingConfigs {
+        release {
+            storeFile file("telewave_new.jks")
+            storePassword "telewave123"
+            keyAlias "telewave"
+            keyPassword "telewave123"
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a'
+            universalApk false
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false   //混淆
+            zipAlignEnabled true   //去掉无用的resourse文件
+            buildConfigField "String", "releaseTime", "\"" + new Date().format("yyyy-MM-dd HH:mm:ss") + "\""
+            proguardFiles 'proguard.cfg'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def fileName
+                    def formattedDate = releaseTime()
+                    if (variant.buildType.name.equals('release')) {
+                        fileName = "BattleCommand${variant.mergedFlavor.versionName}_release_${formattedDate}.apk"
+                    } else if (variant.buildType.name.equals('debug')) {
+                        fileName = "BattleCommand${variant.mergedFlavor.versionName}_debug_${formattedDate}.apk"
+                    }
+                    outputFileName = fileName;
+                }
+            }
+        }
+    }
+    greendao {
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+        dirs '../BusinessTwe/libs'
+        dirs '../LibPush/libs'
+        dirs '../LibMap/libs'
+        dirs '../LibBase/libs'
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("GMT+8"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':BusinessTwe')
+    implementation project(':LibNet')
+    implementation project(':LibStorage')
+    implementation project(':LibIM')
+    implementation project(':LibMap')
+    implementation project(':LibPush')
+    implementation project(':LibRouter')
+    implementation project(':LibBase')
+}

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--单位名称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="单位名称" />
+
+            <TextView
+                android:id="@+id/import_unit_name"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--单位地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="单位地址" />
+
+            <TextView
+                android:id="@+id/import_unit_address"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--值班电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="值班电话" />
+
+            <TextView
+                android:id="@+id/import_unit_dutyphone"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="联系人" />
+
+            <TextView
+                android:id="@+id/import_unit_contactman"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--法人代表-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="法人代表" />
+
+            <TextView
+                android:id="@+id/import_unit_aartificialperson"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--占地面积-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="占地面积" />
+
+            <TextView
+                android:id="@+id/import_unit_holdarea"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--职工人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="职工人数" />
+
+            <TextView
+                android:id="@+id/import_unit_workers"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--固定资产-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="固定资产(万元)" />
+
+            <TextView
+                android:id="@+id/import_unit_fixedassets"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--消防管理人电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消防管理人电话" />
+
+            <TextView
+                android:id="@+id/import_unit_aqglrdh"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--消防安全管理人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消防安全管理人" />
+
+            <TextView
+                android:id="@+id/import_unit_xfaqglr"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--消防安全管理人身份证-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消防安全管理人身份证" />
+
+            <TextView
+                android:id="@+id/import_unit_aqglrsfz"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--消防安全责任人电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消防安全责任人电话" />
+
+            <TextView
+                android:id="@+id/import_unit_aqzrrdh"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--消防安全责任人身份证-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="消防安全责任人身份证" />
+
+            <TextView
+                android:id="@+id/import_unit_aqzrrsfz"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--创建时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="创建时间" />
+
+            <TextView
+                android:id="@+id/import_unit_cjsj"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--地理位置-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="地理位置" />
+
+            <TextView
+                android:id="@+id/import_unit_dlwz"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--单位成立时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="单位成立时间" />
+
+            <TextView
+                android:id="@+id/import_unit_dwclsj"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--法人代表或主要负责人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="法人代表或主要负责人" />
+
+            <TextView
+                android:id="@+id/import_unit_frdb"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--法人电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="法人电话" />
+
+            <TextView
+                android:id="@+id/import_unit_frdbdh"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--建筑面积-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="建筑面积" />
+
+            <TextView
+                android:id="@+id/import_unit_jzmj"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--单位邮政编码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="单位邮政编码" />
+
+            <TextView
+                android:id="@+id/import_unit_yzbm"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--专兼职消防管理人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="专兼职消防管理人" />
+
+            <TextView
+                android:id="@+id/import_unit_zjzxfglr"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--专兼职消防管理人电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="专兼职消防管理人电话" />
+
+            <TextView
+                android:id="@+id/import_unit_zjzxfglrdh"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+        <!--专兼职消防管理人身份证-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Fire_Summary_Label"
+                android:text="专兼职消防管理人身份证" />
+
+            <TextView
+                android:id="@+id/import_unit_zjzxfglrsfz"
+                style="@style/Fire_Summary_Content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

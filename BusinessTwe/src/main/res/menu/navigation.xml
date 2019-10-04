@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_index_page"
+        android:icon="@drawable/bottom_navigation_one_selector"
+        android:title="@string/text_index_page" />
+
+    <item
+        android:id="@+id/navigation_contact_list"
+        android:icon="@drawable/bottom_navigation_two_selector"
+        android:title="@string/text_contact_list" />
+
+    <item
+        android:id="@+id/navigation_rescue_disposal"
+        android:icon="@drawable/bottom_navigation_three_selector"
+        android:title="@string/text_rescue_disposal" />
+
+    <item
+        android:id="@+id/navigation_my_page"
+        android:icon="@drawable/bottom_navigation_four_selector"
+        android:title="@string/text_my_page" />
+
+</menu>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="immersivemode">true</item>
+        <item name="statusbarcolor">@color/top_bar</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Theme.twe" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.twe.immersiveStatusbar">
+        <item name="immersivemode">true</item>
+    </style>
+
+    <style name="Animation.Toast.twe" parent="@android:style/Animation.Toast">
+        <item name="android:windowEnterAnimation">@anim/toast_enter</item>
+        <item name="android:windowExitAnimation">@anim/toast_exit</item>
+    </style>
+
+    <!-- 周边无阴影的dialog -->
+    <style name="dialog_no_shade" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        　　
+        <item name="android:windowIsFloating">true</item>
+        　　
+        <item name="android:windowIsTranslucent">false</item>
+        　　
+        <item name="android:windowNoTitle">true</item>
+        　　
+        <item name="android:background">@android:color/transparent</item>
+        　　
+        <item name="android:windowBackground">@android:color/transparent</item>
+        　　
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+</resources>

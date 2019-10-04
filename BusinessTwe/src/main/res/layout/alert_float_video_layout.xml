@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_size_frame_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorComBg"
+    android:orientation="vertical">
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/float_videoview"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical" />
+
+</LinearLayout>

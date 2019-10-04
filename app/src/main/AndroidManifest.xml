@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.telewave.battlecommand">
+
+    <!-- 获取CUID，用于鉴权，请求签名等 -->
+    <permission
+        android:name="com.telewave.battlecommand.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem" />
+    <!-- 这个权限用于进行网络定位 -->
+    <permission
+        android:name="com.telewave.battlecommand.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <permission
+        android:name="com.telewave.battlecommand.push.permission.MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <permission
+        android:name="com.telewave.battlecommand.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- MQ需要这个权限 -->
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 适配8.0系统未知应用安装权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 解锁屏幕需要的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 悬浮窗的 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- ********华为推送权限设置******** -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- ********小米推送权限设置******** -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- ********魅族推送权限设置******** -->
+    <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息 -->
+    <uses-permission android:name="com.telewave.battlecommand.permission.PROCESS_PUSH_MSG" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.telewave.battlecommand.permission.MIPUSH_RECEIVE" />
+    <!-- 兼容flyme3.0配置权限 -->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
+    <uses-permission android:name="com.telewave.battlecommand.push.permission.MESSAGE" />
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.telewave.battlecommand.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.telewave.fireterminal.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.telewave.fireterminal.SplashActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.twe.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 更新APP服务 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100992415" />
+
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="0" />
+
+        <!-- 悬浮来电服务 -->
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="0" />
+    </application>
+</manifest>

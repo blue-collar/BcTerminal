@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.telewave.battlecommand.activity.DisasterStatisticActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar">
+
+        <include layout="@layout/page_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="警情统计"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="left|center"
+            android:text="开始"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/shape_corner_et_bg"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="开始时间" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="left|center"
+            android:text="结束"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/shape_corner_et_bg"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="结束时间" />
+
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/dp_5"
+            android:background="@color/blue"
+            android:src="@mipmap/refresh" />
+
+    </LinearLayout>
+
+    <!--<com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/disaster_unit_barchart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="300dp"/>-->
+
+    <lecho.lib.hellocharts.view.ColumnChartView
+        android:id="@+id/unit_column_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10" />
+
+</LinearLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.telewave.battlecommand.activity.ExpertInfoDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar">
+
+        <include layout="@layout/page_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="专家详情"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="姓名" />
+
+                <TextView
+                    android:id="@+id/expert_name"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--身份证号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="身份证号" />
+
+                <TextView
+                    android:id="@+id/expert_sfzh"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--出生日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/expert_birth_date"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--性别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/expert_sex"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--籍贯-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="籍贯" />
+
+                <TextView
+                    android:id="@+id/expert_birth_place"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--所属单位-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="所属单位" />
+
+                <TextView
+                    android:id="@+id/expert_unit"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--职务-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="职务" />
+
+                <TextView
+                    android:id="@+id/expert_position"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--学历-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="学历" />
+
+                <TextView
+                    android:id="@+id/expert_education"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--专家领域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="专家领域" />
+
+                <TextView
+                    android:id="@+id/expert_field"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--住址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="住址" />
+
+                <TextView
+                    android:id="@+id/expert_address"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--邮政编码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="邮政编码" />
+
+                <TextView
+                    android:id="@+id/expert_post_code"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--通讯地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="通讯地址" />
+
+                <TextView
+                    android:id="@+id/expert_post_address"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--家庭电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="家庭电话" />
+
+                <TextView
+                    android:id="@+id/expert_home_telephone"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--移动电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="移动电话" />
+
+                <TextView
+                    android:id="@+id/expert_mobile_phone"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+            <!--办公电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Fire_Summary_Label"
+                    android:text="办公电话" />
+
+                <TextView
+                    android:id="@+id/expert_office_phone"
+                    style="@style/Fire_Summary_Content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ImmersiveStatus">
+        <attr name="immersivemode" format="boolean" />
+        <attr name="statusbarcolor" format="integer" />
+    </declare-styleable>
+</resources>

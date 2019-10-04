@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_unit_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/list_item_selector"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/import_unit_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:paddingLeft="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:text="腾讯大厦"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/import_unit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="西藏自治区拉萨市墨竹工卡县墨竹工卡县工卡镇墨竹工卡县工卡镇2"
+        android:textSize="14sp" />
+
+</LinearLayout>

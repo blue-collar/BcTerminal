@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+        google()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':LibBase')
+
+    api rootProject.ext.dependencies.multidex
+    //汉字转拼音库
+    implementation 'com.github.promeg:tinypinyin:1.0.0' // ~80KB
+
+    //图片加载，为什么会存在两个？
+    api 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    api 'com.tencent.imsdk:imsdk:4.4.716'
+    //腾讯云实时音视频
+    api 'com.tencent.liteav:LiteAVSDK_TRTC:6.5.7272'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    api 'com.github.tencentyun:tls-sig-api:1.2'
+}
+

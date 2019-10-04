@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:fitsSystemWindows="true"
+    tools:context="com.telewave.battlecommand.activity.ChemicalDetailActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_bar">
+
+        <include layout="@layout/page_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="危化品详情"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_chemical_basic_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="基本信息" />
+
+            <TextView
+                android:id="@+id/tv_chemical_feature"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="特性" />
+
+            <TextView
+                android:id="@+id/tv_chemical_protect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="防护" />
+
+            <TextView
+                android:id="@+id/tv_chemical_depreciation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="阖值" />
+
+            <TextView
+                android:id="@+id/tv_chemical_precautions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="注意事项" />
+
+            <TextView
+                android:id="@+id/tv_chemical_emergency"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:text="应急措施" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_chemical_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--基本信息-->
+                    <LinearLayout
+                        android:id="@+id/ll_basic_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!--中文名称-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="中文名称：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_chinese_name"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--英文名称-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="英文名称：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_english_name"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--IMDG规则页码-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="IMDG规则页码：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_imdg"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--CAS号-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="CAS号：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_cas"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--RTESC号-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="RTESC号：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_rtesc"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--UN号-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="UN号：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_un"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--危险货物编号-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="危险货物编号：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_danger_code"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--分子式-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="分子式：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_molecular_formula"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--分子量-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_chemical_molecular_weight"
+                                style="@style/Chemical_detail_Label"
+                                android:text="分子量：" />
+
+                            <TextView style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--熔点-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="熔点：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_melting_point"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--沸点-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="沸点：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_boiling_point"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--闪点-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="闪点：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_flash_point"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--危险性类别-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="危险性类别：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_danger_type"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--危险货物包装标志-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="危险货物包装标志：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_danger_package_flag"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--包装类别-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="包装类别：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_package_type"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--建规火险分级-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="建规火险分级：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_fire_range"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                    <!--特性-->
+                    <LinearLayout
+                        android:id="@+id/ll_feature_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--外观与性状-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="外观与性状：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_appearance"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--相对密度水-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="相对密度水：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_relative_density_water"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--相对密度空气-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="相对密度空气：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_relative_density_air"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--稳定性-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="稳定性：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_stability"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--溶解性-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="溶解性：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_solubility"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--燃烧性-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="燃烧性：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_flammability"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--毒性-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="毒性：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_toxicity"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--自燃温度-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="自燃温度：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_auto_ignition_temperature"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--燃烧热-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="燃烧热：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_combustion_heat"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--饱和蒸汽压-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="饱和蒸汽压：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_saturated_vapor_pressure"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--燃烧分解产物-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="燃烧分解产物：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_combustion_product"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--聚合危害-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="聚合危害：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_polymerization_hazard"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--危险特性-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="危险特性：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_danger_feature"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                    <!--防护-->
+                    <LinearLayout
+                        android:id="@+id/ll_protect_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--呼吸系统防护-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="呼吸系统防护：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_breathe_system_protect"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--眼睛防护-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="眼睛防护：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_eye_protect"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--手防护-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="手防护：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_hands_protect"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--防护服-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="防护服：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_protect_clothes"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--避免接触的条件-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="避免接触的条件：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_condition_to_avoid_contact"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                    <!--阖值-->
+                    <LinearLayout
+                        android:id="@+id/ll_precautions_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--临界温度-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="临界温度：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_critical_temperature"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--临界压力-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="临界压力：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_critical_pressure"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--接触极值-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="接触极值：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_contact_extreme_value"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--少量泄露隔离半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="少量泄露隔离半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_small_leakage_barrier_radius"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--少量泄露白天疏散半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="少量泄露白天疏散半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_small_leakage_daytime"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--少量泄露夜间疏散半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="少量泄露夜间疏散半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_small_leakage_night"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--大量泄露隔离半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="大量泄露隔离半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_large_amount_leakage_isolation_radius"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--大量泄露白天疏散半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="大量泄露白天疏散半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_large_leakage_daytime"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--大量泄露夜间疏散半径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="大量泄露夜间疏散半径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_large_leakage_night"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--爆炸下限-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="爆炸下限：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_lower_explosion_limit"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--爆炸上限-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="爆炸上限：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_upper_explosion_limit"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                    <!--注意事项-->
+                    <LinearLayout
+                        android:id="@+id/ll_depreciation_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--主要用途-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="主要用途：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_main_usage"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--灭火方法-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="灭火方法：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_put_fire_method"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--泄露处置-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="泄露处置：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_leakage_disposal"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--储运注意事项-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="储运注意事项：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_storage_transportation_considerations"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                    <!--应急措施-->
+                    <LinearLayout
+                        android:id="@+id/ll_emergency_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!--禁忌物-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="禁忌物：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_forbidden"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--吸入-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="吸入：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_breathe_in"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--食入-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="食入：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_ingestion"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--侵入途径-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="侵入途径：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_invasion_route"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--健康危害-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="健康危害：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_health_hazard"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--工程控制-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="工程控制：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_engineering_control"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--皮肤接触-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="皮肤接触：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_skin_contact"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--眼睛接触-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="眼睛接触：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_eye_contect"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                        <!--其他-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Chemical_detail_Label"
+                                android:text="其他：" />
+
+                            <TextView
+                                android:id="@+id/tv_chemical_other"
+                                style="@style/Chemical_detail_Content" />
+                        </LinearLayout>
+
+                        <View style="@style/Chemical_Divider" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

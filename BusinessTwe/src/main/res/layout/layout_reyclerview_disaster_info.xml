@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_100"
+    android:layout_marginBottom="@dimen/dp_3"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_disaster_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_home_rescue"
+        android:scaleType="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10" />
+
+    <LinearLayout
+        android:id="@+id/ll_disaster_top_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/iv_disaster_type"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toEndOf="@+id/iv_disaster_type"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/ic_home_time" />
+
+        <TextView
+            android:id="@+id/tv_disaster_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:textSize="@dimen/sp_14"
+            android:text="抢险救援（一级）"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_disaster_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="07-16 07:29"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_disaster_second_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/ll_disaster_top_view"
+        android:layout_toRightOf="@+id/iv_disaster_type"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_home_team"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tv_disaster_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:textSize="@dimen/sp_12"
+            android:text="主管中队:" />
+
+        <TextView
+            android:id="@+id/tv_disaster_team_name"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:lines="1"
+            android:maxLength="15"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_12"
+            android:text="仙女湖中队" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_disaster_third_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/ll_disaster_second_view"
+        android:layout_toRightOf="@+id/iv_disaster_type"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_home_address"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tv_disaster_address"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:lines="1"
+            android:ellipsize="end"
+            android:maxLength="12"
+            android:textSize="@dimen/sp_14"
+            android:text="地址" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_disaster_location"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/ic_home_location"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/sp_10"
+                android:text="定位" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_disaster_chat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/ic_home_chat_msg"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/sp_10"
+                android:text="通讯" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_disaster_navigation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/ic_home_navigation"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/sp_10"
+                android:text="导航" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
